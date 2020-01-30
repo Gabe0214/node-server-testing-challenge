@@ -7,6 +7,7 @@ module.exports = {
     connection: {
       filename: './data/users.db3'
     },
+    setNullAsDefault: true, 
     pool: {
       afterCreate: (conn, done) => {
         conn.run("PRAGMA foreign_keys = ON", done)
